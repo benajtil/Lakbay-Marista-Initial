@@ -7,64 +7,222 @@
     <link rel="shortcut icon" type="x-icon" href="imgs/lakbay3.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/review.css">
-    <link rel="stylesheet" href="destination.html">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Single+Day&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/label.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Single+Day&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Righteous&family=Single+Day&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <style>
+        .carousel-item {
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            opacity: 0;
+            background-color: transparent;
+        }
+
+        .carousel-item-next {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        .carousel-item-prev {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .carousel-item.active {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+        .carousel-inner {
+            background-color: transparent;
+        }
+    </style>
 
     <title>E-tourism</title>
+
 </head>
 
-<body>
+<body style="background-color: black;">
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">LM</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="/imgs/logoLM.png" alt="Bootstrap" width="65" height="65">
+                </a>
+
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" style="font-size: 100%; font-family: 'Cabin', sans-serif;" aria-current="page"
+                                href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="destination.html">Destinations</a>
+                            <a class="nav-link active" style="font-size: 100%; font-family: 'Cabin', sans-serif;" aria-current="page"
+                                href="destination.html">Destinations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" style="font-size: 100%; font-family: 'Cabin', sans-serif;" href="#">About Us</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="d-flex ms-auto" role="search">
+                        <input class="form-control me-2 custom-search-input" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" style="height: 30px;" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </form>
+
+
+
+
                 </div>
             </div>
         </nav>
     </header>
 
-
     <section id="fronthome" class="homepage">
-        <a href="index.html" style="display: flex; justify-content: center;">
-            <img src="/imgs/lakbaymaristaheadliner-removebg.png" alt="index.html" style="height: 240px;">
-            <video autoplay loop muted plays-inline class="bgvid">
-                <source src="/vid/kalsangi.mp4" type="video/mp4">
-            </video>
-        </a>
+        <div style="display: flex; justify-content: center;">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
+                style="width: 100%; background-color: #3a3a3a;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active shadow">
+                        <img src="/imgs/tour1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption" style="padding-bottom: 10%;">
+                            <h5
+                                style="text-align: center; font-family: Kanit, sans-serif; padding-bottom: 2%; font-size: 200%">
+                                <strong>Lakbay Marista Tourism </strong>
+                            </h5>
+                            <p style="padding-bottom: 0%; font-family: 'Cabin', sans-serif;">Explore The Best Tourist Destinations in South Cotabato and Plan your Next Adventure!</p>
+                            <button type="button" class="btn btn-dark" id="exploreBtn1"
+                                style="position: absolute; height: 50px; font-size: 16px; padding: 0 0px; top: 60%; left:50%; transform:translate(-50%, -50%); width:30%">Explore
+                                Destinations</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item shadow">
+                        <img src="/imgs/tour5.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption" style="padding-bottom: 10%;">
+                            <h5
+                                style="text-align: center; padding-bottom: 2%; font-family: Kanit, sans-serif; font-size: 200%">
+                                <strong>Lakbay Marista Tourism </strong>
+                            </h5>
+                            <p style="padding-bottom: 0%; font-family: 'Cabin', sans-serif;">Explore The Best Tourist Destinations in South Cotabato and Plan your Next Adventure!</p>
+                            <button type="button" class="btn btn-dark" id="exploreBtn2"
+                                style="position: absolute; height: 50px; font-size: 16px; padding: 0 0px; top: 60%; left:50%; transform:translate(-50%, -50%); width:30%">Explore
+                                Destinations</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item shadow">
+                        <img src="/imgs/tour2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption" style="padding-bottom: 10%;">
+                            <h5
+                                style="text-align: center; padding-bottom: 2%; font-family: Kanit, sans-serif; font-size: 200%">
+                                <strong>Lakbay Marista Tourism </strong>
+                            </h5>
+                            <p style="padding-bottom: 0%; font-family: 'Cabin', sans-serif;">Explore The Best Tourist Destinations in South Cotabato and Plan your Next Adventure!</p>
+                            <button type="button" class="btn btn-dark" id="exploreBtn3"
+                                style="position: absolute; height: 50px; font-size: 16px; padding: 0 0px; top: 60%; left:50%; transform:translate(-50%, -50%); width:30%">Explore
+                                Destinations</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item shadow">
+                        <img src="/imgs/tour4.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption" style="padding-bottom: 10%;">
+                            <h5
+                                style="text-align: center; font-family: Kanit, sans-serif; padding-bottom: 2%; font-size: 200%">
+                                <strong>Lakbay Marista Tourism </strong>
+                            </h5>
+                            <p style="padding-bottom: 0%; font-family: 'Cabin', sans-serif;">Explore The Best Tourist Destinations in South Cotabato and Plan your Next Adventure!</p>
+                            <button type="button" class="btn btn-dark" id="exploreBtn4"
+                                style="position: absolute; height: 50px; font-size: 16px; padding: 0 0px; top: 60%; left:50%; transform:translate(-50%, -50%); width:30%">Explore
+                                Destinations</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item shadow">
+                        <img src="/imgs/tour6.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption" style="padding-bottom: 10%;">
+                            <h5
+                                style="text-align: center; font-family: Kanit, sans-serif; padding-bottom: 2%; font-size: 200%">
+                                <strong>Lakbay Marista Tourism </strong>
+                            </h5>
+                            <p style="padding-bottom: 0%; font-family: 'Cabin', sans-serif;">Explore The Best Tourist Destinations in South Cotabato and Plan your Next Adventure!</p>
+                            <button type="button" class="btn btn-dark" id="exploreBtn5"
+                                style="position: absolute; height: 50px; font-size: 16px; padding: 0 0px; top: 60%; left:50%; transform:translate(-50%, -50%); width:30%">Explore
+                                Destinations</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
     </section>
 
+    <h1 class="Featured Destination"
+        style="text-align: center; padding-top: 5%; font-family: Kanit, sans-serif; color: rgb(230, 236, 241) !important;">
+        <strong>Featured Destinations</strong>
+    </h1>
+    <h2 class="Destination"
+        style="text-align: center; padding-top: 2%; font-size: 100%; font-family: 'Cabin', sans-serif; color: rgb(230, 236, 241) !important;">
+        <strong>Discover our hand-picked destinations for your next trip</strong>
+    </h2>
+
+    <button type="button"
+        style="position: absolute;height: 50px; font-size: 16px; padding: 0 0px; top: 48%; left:50%; transform:translate(-50%, -50%); width:10%;"
+        class="btn btn-light" id="exploreBtn4">View All</button>
+
+
+    <section class="gallery" style="padding-top: 10%">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <img src="/imgs/zip.jpg" class="gallery-item" alt="gallery">
+                    <div class="label">Popular</div>
+                </div>
+                <div class="col">
+                    <img src="/imgs/divine.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
+                    <div class="label">Featured</div>
+                </div>
+                <div class="col">
+                    <img src="/imgs/holon.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr
+        style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); width: 1450px; height: 1px; color: rgb(227, 236, 244); background-color: rgb(227, 236, 244); border: none;">
+
+
+    <h3 class="Featured Destination"
+        style="padding-top: 20%; font-family: Kanit, sans-serif; color: rgb(230, 236, 241) !important;">
+        <strong>Travel Tips</strong>
+    </h3>
 
 
     <footer>
@@ -80,6 +238,11 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="button.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+
+
+
 </body>
 
 
