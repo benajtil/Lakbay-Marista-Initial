@@ -1,21 +1,14 @@
-.label {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    z-index: 1;
-}
+
 
 
 .col:nth-child(1) .label {
-    top: 742px;
+    top: 736px;
     
 }
 
 
 .col:nth-child(2) .label {
-    top: 742px;
+    top: 736px;
     
 }
 
