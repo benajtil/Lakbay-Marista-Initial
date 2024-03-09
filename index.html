@@ -54,6 +54,112 @@
         .carousel-inner {
             background-color: transparent;
         }
+
+        .carousel-inner {
+            max-width: 100%;
+            /* Set the maximum width to prevent overflow */
+        }
+
+        .gallery {
+            max-width: 100%;
+            /* Set the maximum width to prevent overflow */
+            overflow: hidden;
+            /* Hide any content that overflows the container */
+        }
+
+        .travel-tips-section {
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsGVy1Od_kKcGmuX0b_IANAdIl1Oqw4jIOXFigN0dRbry9QVib0skrL5jQgDyYEPSBOa2esWtTQyTmAQKnhyQUgxa2mGpYnsQrIGqoGXzQFHfgNq8ynOzpB2IgKQtmAQXouFzYKoDOEy4/s1600/hikong+kmebel.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            /* Add this line */
+        }
+
+        .travel-tips-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Adjust the opacity value here */
+        }
+
+        .travel-tips-section h3,
+        .travel-tips-section p {
+            color: #fff;
+            filter: brightness(150%);
+            /* Set text color to white */
+        }
+
+        .traveltips.fadeIn {
+            opacity: 1;
+            /* Set opacity to 1 for fade-in effect */
+        }
+
+        .traveltips.fadeOut {
+            opacity: 0;
+            /* Set opacity to 0 for fade-out effect */
+        }
+
+        #fixedHr {
+            width: 100%;
+            max-width: 1390px;
+            height: 1px;
+            margin: 0 auto;
+            background-color: rgb(227, 236, 244);
+            border: none;
+        }
+
+        #fixedHr2 {
+            width: 100%;
+            max-width: 1390px;
+            height: 1px;
+            margin: 50px auto;
+            background-color: rgb(227, 236, 244);
+            border: none;
+        }
+
+        #fixedHr3 {
+            width: 100%;
+            max-width: 1390px;
+            height: 1px;
+            margin: 250px auto;
+            background-color: rgb(227, 236, 244);
+            border: none;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .fadeIn {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .fadeOut {
+            animation: fadeOut 0.5s ease forwards;
+        }
     </style>
 
     <title>E-tourism</title>
@@ -102,7 +208,7 @@
     <section id="fronthome" class="homepage">
         <div style="display: flex; justify-content: center;">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"
-                style="width: 100vw; background-color: #3a3a3a;">
+                style="width: 100%; background-color: #3a3a3a;">
                 <div class="carousel-inner">
                     <div class="carousel-item active shadow">
                         <img src="/imgs/tour1.png" class="d-block w-100" alt="...">
@@ -210,15 +316,19 @@
 
 
     <section class="gallery" style="padding-top: 96px">
-        <div class="container-lg">
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col">
                     <img src="/imgs/zip.jpg" class="gallery-item" alt="gallery">
-                    <div class="label" style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">Popular</div>
+                    <div class="label"
+                        style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
+                        Popular</div>
                 </div>
                 <div class="col">
                     <img src="/imgs/divine.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
-                    <div class="label" style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">Featured</div>
+                    <div class="label"
+                        style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
+                        Featured</div>
                 </div>
                 <div class="col">
                     <img src="/imgs/holon.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
@@ -227,13 +337,15 @@
         </div>
     </section>
 
-    <hr
-        style="position: absolute; top: 37%; left: 50%; transform: translate(-50%, -50%); width: 1350px; height: 1px; color: rgb(227, 236, 244); background-color: rgb(227, 236, 244); border: none;">
 
-    <div class="container mt-5">
+    <hr id="fixedHr">
+
+
+
+    <div class="container mt-5 travel-tips-section">
         <div class="row justify-content-center">
-            <div class="col text-center"> 
-                <h3 class="col" style="font-family: Kanit, sans-serif; padding-top:10%; color: rgb(230, 236, 241) !important;">
+            <div class="traveltips">
+                <h3 class="col" style="font-family: Kanit, sans-serif; color: rgb(230, 236, 241) !important;">
                     <strong>Travel Tips</strong>
                 </h3>
                 <p class="useful" style="font-family: Kanit, sans-serif; color: rgb(230, 236, 241) !important;">
@@ -247,7 +359,9 @@
                 <div class="card card1">
                     <h5 style="font-family: Kanit, sans-serif;">What to pack for a trip?</h5>
                     <p style="height: 5%;"></p>
-                    <p style="color: rgb(247, 248, 249); font-family: Kanit, sans-serif;">Plan your packing wisely. Ensure you've got the basics covered - clothes, toiletries, and any must-have items for your journey.</p>
+                    <p style="color: rgb(247, 248, 249); font-family: Kanit, sans-serif;">Plan your packing wisely.
+                        Ensure you've got the basics covered - clothes, toiletries, and any must-have items for your
+                        journey.</p>
                 </div>
             </div>
             <div class="col">
@@ -271,21 +385,35 @@
         </div>
     </div>
 
-
-
-    <h4 style="padding-top: 100%;"></h4>
-
-
-
-
-    <hr
-        style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); width: 1350px; height: 1px; color: rgb(227, 236, 244); background-color: rgb(227, 236, 244); border: none;">
+    <!-- <hr id="fixedHr2"
+        style="width: 100%; max-width: 1390px; height: 1px; margin: 0 auto; background-color: rgb(227, 236, 244); border: none;"> -->
 
 
 
+    
 
 
-    <footer>
+    <hr id="fixedHr2">
+
+    
+    <section class="customerreview">
+        <div class="container">
+            <div class="customer-reviews">
+                <h1 class="review-text" style="font-family: Kanit, sans-serif; color: rgb(213, 218, 222); padding-top:10%">Customer Reviews</h1>
+                <p style="color: #f9f7f7;">Read what our customers have to say about their travel experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr id="fixedHr3">
+
+
+
+    <div style="height: 600px;"></div>
+
+
+
+    <footer style="height: 100%;">
 
     </footer>
     <div id="reviews">

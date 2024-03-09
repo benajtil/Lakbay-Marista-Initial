@@ -9,22 +9,22 @@ function isInViewport(element) {
     );
 }
 
-// Function to add animation class to cards when they come into view
-function addAnimationToCards() {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        if (isInViewport(card)) {
-            card.classList.add('fadeIn');
-            card.classList.remove('fadeOut');
+// Function to add animation class to elements when they come into view
+function addAnimationToElements() {
+    const elements = document.querySelectorAll('.traveltips, .card');
+    elements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('fadeIn');
+            element.classList.remove('fadeOut');
         } else {
-            card.classList.remove('fadeIn');
-            card.classList.add('fadeOut');
+            element.classList.remove('fadeIn');
+            element.classList.add('fadeOut');
         }
     });
 }
 
-// Listen for scroll events and add animation to cards
-window.addEventListener('scroll', addAnimationToCards);
+// Listen for scroll events and add animation to elements
+window.addEventListener('scroll', addAnimationToElements);
 
-// Initial check for cards in view on page load
-addAnimationToCards();
+// Initial check for elements in view on page load
+addAnimationToElements();
