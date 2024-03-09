@@ -127,7 +127,7 @@
             width: 100%;
             max-width: 1390px;
             height: 1px;
-            margin: 250px auto;
+            margin: 90px auto;
             background-color: rgb(227, 236, 244);
             border: none;
         }
@@ -159,6 +159,79 @@
 
         .fadeOut {
             animation: fadeOut 0.5s ease forwards;
+        }
+
+        .review {
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border-radius: 10px;
+            /* Add border style */
+            border: 2px solid white;
+            /* Adjust border color, style, and width as needed */
+        }
+
+        .review.active {
+            opacity: 1;
+        }
+
+        .slideInLeft {
+            animation: slideInLeftAnimation 0.5s ease;
+        }
+
+        @keyframes slideInLeftAnimation {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .slideOutLeft {
+            animation: slideOutLeftAnimation 0.5s ease;
+        }
+
+        @keyframes slideOutLeftAnimation {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+
+        .customer-reviews h1.review-text,
+        .customer-reviews p {
+            color: white;
+        }
+
+        .review .card-title {
+            color: white;
+        }
+
+        .review .card-title {
+            color: white;
+        }
+
+        .review .card-text {
+            color: white;
+        }
+
+        .customerreview .card {
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .customerreview .card-body {
+            background-color: transparent;
+            /* Add this line to make the card body transparent */
         }
     </style>
 
@@ -390,20 +463,65 @@
 
 
 
-    
+
 
 
     <hr id="fixedHr2">
 
-    
+
     <section class="customerreview">
         <div class="container">
-            <div class="customer-reviews">
-                <h1 class="review-text" style="font-family: Kanit, sans-serif; color: rgb(213, 218, 222); padding-top:10%">Customer Reviews</h1>
-                <p style="color: #f9f7f7;">Read what our customers have to say about their travel experiences.</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="customer-reviews" style="position: absolute; top: 1970px;">
+                        <h1 class="review-text">Customer Reviews</h1>
+                        <p>Read what our customers have to say about their travel experiences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-6">
+                    <div id="review-box" class="review-box">
+                        <div class="review active">
+                            <div class="card-body">
+                                <h5 class="card-title">Papang Ben</h5>
+                                <p class="card-text">Absolutely fantastic experience! The destinations were stunning,
+                                    the guides were knowledgeable, and the entire trip was well-organized. Highly
+                                    recommended!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="card-body">
+                                <h5 class="card-title">Ford Senior High School</h5>
+                                <p class="card-text">An adventure of a lifetime! Lakbay Marista Tourism exceeded all
+                                    expectations. The accommodations were luxurious, and the activities were diverse.
+                                    Already planning my next trip!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="card-body">
+                                <h5 class="card-title">Burgos Love Kits</h5>
+                                <p class="card-text">A dream vacation come true! Lakbay Marista Tourism curated the
+                                    perfect itinerary for us. From adrenaline-pumping activities to serene moments, it
+                                    was everything we hoped for and more.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
 
     <hr id="fixedHr3">
 
@@ -429,6 +547,7 @@
     <script src="button.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="animation.js"></script>
+    <script src="reviewsliding.js"></script>
 
 
 </body>
