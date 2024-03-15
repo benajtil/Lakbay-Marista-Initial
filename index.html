@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/label.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="login-register.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
@@ -136,7 +137,16 @@
             width: 100%;
             max-width: 1390px;
             height: 1px;
-            margin: 500px auto;
+            margin: 200px auto;
+            background-color: rgb(227, 236, 244);
+            border: none;
+        }
+
+        #fixedHr5 {
+            width: 100%;
+            max-width: 130px;
+            height: 1px;
+            margin: 10px auto;
             background-color: rgb(227, 236, 244);
             border: none;
         }
@@ -245,27 +255,96 @@
         .icons {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            /* Align items horizontally in the center */
+            padding-top: 30px;
+            padding-right: 40%;
+            /* Adjust top padding as needed */
         }
 
         .icon {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color: #007bff;
-            margin: 10px 0;
-            /* Adjust vertical margin */
-            text-align: center;
-            line-height: 60px;
+            background-color: #5f5f63;
+            margin-right: 10px;
+            /* Add margin to separate icon from text */
             font-size: 24px;
             color: #fff;
             transition: background-color 0.3s;
         }
 
         .icon:hover {
-            background-color: #0056b3;
+            background-color: #e6ebef;
+        }
+
+        .icon-wrapper {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            /* Add margin between icon-wrapper elements */
+        }
+
+        .icon-wrapper span {
+            margin-left: 10px;
+            white-space: nowrap;
+            /* Adjust the spacing between the icon and text */
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .logo-container img {
+            width: 30px;
+            /* Adjust the width as needed */
+            height: 30px;
+            /* Maintain aspect ratio */
+        }
+
+
+        .logo-container:hover .menu {
+            display: block;
+            transform: translateY(0);
+            /* Slide down when hovering over the logo */
+        }
+
+        .menu-toggle-icon:checked~.logo-container .menu-toggle-icon {
+            display: block;
+        }
+
+        .menu-toggle-icon {
+            display: none;
+        }
+
+        .menu-toggle-icon:checked~.menu {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background-color: #f9f9f9;
+            padding: 20px;
+            z-index: 1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            display: block;
+            padding: 5px 0;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
         }
     </style>
 
@@ -277,9 +356,12 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
+
                 <a class="navbar-brand" href="index.html">
                     <img src="/imgs/logoLM.png" alt="Bootstrap" width="65" height="65">
                 </a>
+
+
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav me-auto">
@@ -295,7 +377,19 @@
                             <a class="nav-link" style="font-size: 100%; font-family: 'Cabin', sans-serif;"
                                 href="#">About Us</a>
                         </li>
+
                     </ul>
+                    <div class="logo-container">
+                        <label for="menuToggle" class="logo">
+                            <img src="/imgs/profile.png" alt="Logo" width="65" height="65">
+                        </label>
+                        <input type="checkbox" id="menuToggle" class="menu-toggle-icon">
+                        <div class="menu" id="menu">
+                            <a href="login.html" id="loginNavItem">Login</a>
+                            <a href="logout.php" id="logoutNavItem" style="display: none;">Logout</a>
+                            <a href="profile.php" id="profileNavItem" style="display: none;">User Profile</a>
+                        </div>
+                    </div>
                     <form class="d-flex ms-auto" role="search">
                         <input class="form-control me-2 custom-search-input" type="search" placeholder="Search"
                             aria-label="Search">
@@ -563,20 +657,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="customer-reviews" style="position: absolute; top: 2300px; right:60%">
+                    <div class="customer-reviews">
                         <h1 class="review-text">Tour Location</h1>
                         <p>Check out our exciting tour packages tailored for different interests.</p>
-                    </div>
-                    <div class="icons">
-                        <a href="#" class="icon"><i class="fas fa-hiking"></i></a>
-                        <a href="#" class="icon"><i class="fas fa-swimmer"></i></a>
-                        <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+                        <div class="icons" style="position: relative; top: -50px;">
+                            <div class="icon-wrapper">
+                                <a href="#" class="icon"><i class="fas fa-hiking"></i></a>
+                                <span>Adventure Tours</span>
+                            </div>
+                            <hr id="fixedHr5">
+                            <div class="icon-wrapper">
+                                <a href="#" class="icon"><i class="fas fa-swimmer"></i></a>
+                                <span>Swimming Pool</span>
+                            </div>
+                            <div class="icon-wrapper">
+                                <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+                                <span>City/Municipality Explorations</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+
+
 
     <hr id="fixedHr4">
 
@@ -602,7 +707,120 @@
     <script src="animation.js"></script>
     <script src="reviewsliding.js"></script>
 
+    <script>
+        function checkLoggedIn() {
+            var isLoggedIn = sessionStorage.getItem('loggedIn');
+            return isLoggedIn === 'true';
+        }
 
+
+        function toggleLoginLogout() {
+            var loginNavItem = document.getElementById('loginNavItem');
+            var logoutNavItem = document.getElementById('logoutNavItem');
+
+            if (checkLoggedIn()) {
+                loginNavItem.style.display = 'none';
+                logoutNavItem.style.display = 'block';
+            } else {
+
+                loginNavItem.style.display = 'block';
+                logoutNavItem.style.display = 'none';
+            }
+        }
+
+
+        toggleLoginLogout();
+
+
+        function login() {
+
+            sessionStorage.setItem('loggedIn', 'true');
+
+
+            toggleLoginLogout();
+        }
+
+
+        function logout() {
+
+            sessionStorage.setItem('loggedIn', 'false');
+
+
+            toggleLoginLogout();
+        }
+    </script>
+    <script>
+        var menuCheckbox = document.getElementById("menuToggle");
+        var menu = document.getElementById("menu");
+        var logoContainer = document.querySelector(".logo-container");
+
+        logoContainer.addEventListener("click", function () {
+            menuCheckbox.checked = !menuCheckbox.checked;
+            menu.style.display = menuCheckbox.checked ? "block" : "none";
+        });
+
+
+        logoContainer.addEventListener("mouseenter", function () {
+            clearTimeout(window.menuTimeout);
+        });
+
+
+        logoContainer.addEventListener("mouseleave", function () {
+            window.menuTimeout = setTimeout(function () {
+                menuCheckbox.checked = false;
+                menu.style.display = "none";
+            }, 2000);
+        });
+    </script>
+    <script>
+        var menuCheckbox = document.getElementById("menuToggle");
+        var menu = document.getElementById("menu");
+        var logoContainer = document.querySelector(".logo-container");
+        var loginNavItem = document.getElementById("loginNavItem");
+        var logoutNavItem = document.getElementById("logoutNavItem");
+        var profileNavItem = document.getElementById("profileNavItem");
+
+        logoContainer.addEventListener("click", function () {
+            menuCheckbox.checked = !menuCheckbox.checked;
+            menu.style.display = menuCheckbox.checked ? "block" : "none";
+        });
+
+        logoContainer.addEventListener("mouseenter", function () {
+            clearTimeout(window.menuTimeout);
+        });
+
+
+        logoContainer.addEventListener("mouseleave", function () {
+            window.menuTimeout = setTimeout(function () {
+                menuCheckbox.checked = false;
+                menu.style.display = "none";
+            }, 2000); // Adjust the delay (in milliseconds) as needed
+        });
+
+        // Add click event listener to logout
+        logoutNavItem.addEventListener("click", function () {
+            // Perform logout actions
+            isLoggedIn = false; // Assuming isLoggedIn is a global variable
+            toggleLoginLogout();
+        });
+
+        // Simulate login/logout status and user profile visibility
+        var isLoggedIn = true; // Change to true or false based on actual login status
+        toggleLoginLogout();
+
+        // Function to toggle login/logout items in the menu
+        function toggleLoginLogout() {
+            if (isLoggedIn) {
+                loginNavItem.style.display = "none";
+                logoutNavItem.style.display = "block";
+                profileNavItem.style.display = "block";
+            } else {
+                loginNavItem.style.display = "block";
+                logoutNavItem.style.display = "none";
+                profileNavItem.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 

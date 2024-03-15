@@ -1,6 +1,8 @@
 .navbar-nav {
     font-family: 'Cabin', sans-serif;
-    margin-left: 60%;
+    margin-left: 300px; /* Change margin-left to auto */
+    max-width: 100%; /* Set a maximum width for the navbar-nav */
+    
 }
 
 .navbar-nav .nav-link {
