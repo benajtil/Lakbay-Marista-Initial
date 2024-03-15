@@ -131,6 +131,7 @@
             background-color: rgb(227, 236, 244);
             border: none;
         }
+
         #fixedHr4 {
             width: 100%;
             max-width: 1390px;
@@ -239,6 +240,32 @@
         .customerreview .card-body {
             background-color: transparent;
             /* Add this line to make the card body transparent */
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Align items horizontally in the center */
+        }
+
+        .icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #007bff;
+            margin: 10px 0;
+            /* Adjust vertical margin */
+            text-align: center;
+            line-height: 60px;
+            font-size: 24px;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .icon:hover {
+            background-color: #0056b3;
         }
     </style>
 
@@ -541,10 +568,12 @@
                         <p>Check out our exciting tour packages tailored for different interests.</p>
                     </div>
                     <div class="icons">
-                        
+                        <a href="#" class="icon"><i class="fas fa-hiking"></i></a>
+                        <a href="#" class="icon"><i class="fas fa-swimmer"></i></a>
+                        <a href="#" class="icon"><i class="fas fa-camera"></i></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
