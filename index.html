@@ -30,9 +30,119 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    
+
 
     <title>E-tourism</title>
+
+    <style>
+        
+
+
+        #carousel1 {
+            padding-top: 30%;
+        }
+
+        .carousel-item img {
+            height: 350px;
+            object-fit: cover;
+            filter: brightness(40%);
+        }
+
+
+        .carousel-item {
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            opacity: 0;
+            background-color: transparent;
+        }
+
+        .carousel-item-next {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        .carousel-item-prev {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .carousel-item.active {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+        .carousel-inner {
+            background-color: transparent;
+        }
+
+        .carousel-inner {
+            max-width: 100%;
+            /* Set the maximum width to prevent overflow */
+        }
+
+
+
+        .travel-memories {
+            padding: 50px 0;
+            background-color: #030303;
+        }
+
+        .travel-memories h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .memory {
+            background-color: #ddd8d8;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 500px;
+            /* Adjust the height as needed */
+            display: flex;
+            /* Add this line */
+            flex-direction: column;
+            /* Add this line */
+            justify-content: space-between;
+
+        }
+
+        .memory:hover {
+            transform: translateY(-5px);
+        }
+
+
+
+        .memory:hover:before {
+            transform: translateY(0);
+        }
+
+        .memory img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ede8e8;
+            filter: brightness(100%);
+        }
+
+        .memory h3 {
+            font-size: 20px;
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .memory p {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            margin: 0;
+            opacity: 1;
+            /* Initially hide the text */
+
+        }
+    </style>
+
+
 
 </head>
 
@@ -394,7 +504,7 @@
                                 <div class="memory">
                                     <img src="/imgs/tnalak.JPG" alt="Travel Memory 2">
                                     <h3>T'nalak Festival</h3>
-                                    <p>Every month of July, the vibrant province of South Cotabato, nestled in the heart
+                                    <p>Photographer: Nanardx<br>Every month of July, the vibrant province of South Cotabato, nestled in the heart
                                         of Mindanao, comes alive with a spectacular burst of colors, beats of
                                         traditional music, and the rich aroma of local cuisine. This is the T'nalak
                                         Festival, a celebration like no other, paying homage to South Cotabato's rich
@@ -422,31 +532,24 @@
                                 <div class="memory">
                                     <img src="/imgs/matutumpineapple.jpg" alt="Travel Memory 1">
                                     <h3>Mt. Matutum and the Hypnotic Stars</h3>
-                                    <p>Photographer: Ramil Leonida | General Santos City<br>Mt. Matutum had been the
+                                    <p>Photographer: Ramil Leonida<br>Mt. Matutum had been the
                                         subject of many landscape photos from sunrise til sunset. During the night, its
                                         also one of the best subject while shooting for the stars in the night sky.</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="memory">
-                                    <img src="/imgs/tnalak.JPG" alt="Travel Memory 2">
-                                    <h3>T'nalak Festival</h3>
-                                    <p>Every month of July, the vibrant province of South Cotabato, nestled in the heart
-                                        of Mindanao, comes alive with a spectacular burst of colors, beats of
-                                        traditional music, and the rich aroma of local cuisine. This is the T'nalak
-                                        Festival, a celebration like no other, paying homage to South Cotabato's rich
-                                        culture and history, and the beautiful handwoven fabric - the T'nalak of the
-                                        Tboli's.</p>
+                                    <img src="/imgs/tunneloflights.jpg" alt="Travel Memory 2">
+                                    <h3>Tunnel of Lights
+                                    </h3>
+                                    <p>Photographer: Aleli Faith Cabahug<br>Step into a world of enchantment at the Kasadya Christmas Village in Surallah, South Cotabato, where the Tunnel of Lights ignites the spirit of the season with its mesmerizing glow. Experience the magic and make memories that sparkle forever.</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="memory">
-                                    <img src="/imgs/tboliknoon.jpg" alt="Travel Memory 3">
-                                    <h3>T'boli Illuminated</h3>
-                                    <p>This photo was taken during the culmination of the Seslong Festival 2019. The
-                                        foreground clearly shows TBOLI KNOON, simply put, it means beautiful T'Boli. It
-                                        serves as a greeting to visitors and tourists, and also a reminder to the
-                                        locals. The fireworks were just added bonus to the already spectacular scene.
+                                    <img src="/imgs/kayakholon.jpg" alt="Travel Memory 3">
+                                    <h3>Kayaking is more fun at Lake Holon</h3>
+                                    <p>Photographer: Jeniel Buday<br>Enjoy the fresh air and lush green sceneries while paddling in the crystal clear water of majestic Lake Holon. Kayaking is another outdoor activity attraction offered for campers and guests of Lake Holon in Tboli, South Cotabato.
                                     </p>
                                 </div>
                             </div>

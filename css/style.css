@@ -1,51 +1,14 @@
 body {
-    margin: 0;
-    min-height: 100vh;
-    position: relative;
-    background-color: rgb(192, 176, 176);
-}
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+            background-color: rgb(192, 176, 176);
+        }
 
-.homepage {
-    position: relative;
-}
 
-#carousel1 {
-    padding-top: 30%;
-}
-
-.carousel-item img {
-    height: 350px;
-    object-fit: cover;
-    filter: brightness(40%);
-}
-
-.carousel-item {
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    opacity: 0;
-    background-color: transparent;
-}
-
-.carousel-item-next {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-.carousel-item-prev {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-
-.carousel-item.active {
-    transform: translateX(0%);
-    opacity: 1;
-}
-
-.carousel-inner {
-    background-color: transparent;
-    max-width: 100%;
-    /* Set the maximum width to prevent overflow */
-}
-
+        .homepage {
+            position: relative;
+        }
 .gallery {
     max-width: 100%;
     /* Set the maximum width to prevent overflow */
@@ -100,7 +63,7 @@ body {
 #fixedHr7,
 #fixedHr8 {
     width: 100%;
-    max-width: 1390px;
+    max-width: 1500px;
     height: 1px;
     background-color: rgb(227, 236, 244);
     border: none;
@@ -127,7 +90,7 @@ body {
 }
 
 #fixedHr8 {
-    margin: 200px auto;
+    margin: 100px auto;
 }
 
 @keyframes fadeIn {
@@ -315,54 +278,5 @@ body {
     background-color: #ddd;
 }
 
-.travel-memories {
-    padding: 50px 0;
-    background-color: #030303;
-}
 
-.travel-memories h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 32px;
-}
 
-.memory {
-    background-color: #ddd8d8;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    height: 500px;
-    /* Adjust the height as needed */
-    display: flex;
-    /* Add this line */
-    flex-direction: column;
-    /* Add this line */
-    justify-content: space-between;
-}
-
-.memory:hover {
-    transform: translateY(-5px);
-}
-
-.memory img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ede8e8;
-    filter: brightness(100%);
-}
-
-.memory h3 {
-    font-size: 20px;
-    margin-top: auto;
-    text-align: center;
-}
-
-.memory p {
-    font-size: 16px;
-    color: #666;
-    text-align: center;
-    margin: 0;
-    opacity: 1;
-    /* Initially hide the text */
-}
