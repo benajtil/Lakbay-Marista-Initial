@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="login-register.css">
+    <link rel="stylesheet" href="blog.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
@@ -35,20 +36,22 @@
     <title>E-tourism</title>
 
     <style>
-        
         #carousel1 {
             padding-top: 30%;
         }
+
         .carousel-item img {
             height: 350px;
             object-fit: cover;
             filter: brightness(40%);
         }
+
         .carousel-item {
             transition: transform 0.2s ease, opacity 0.2s ease;
             opacity: 0;
             background-color: transparent;
         }
+
         .carousel-item-next {
             transform: translateX(100%);
             opacity: 0;
@@ -70,8 +73,9 @@
 
         .carousel-inner {
             max-width: 100%;
-            /* Set the maximum width to prevent overflow */
+            
         }
+
         .travel-memories {
             padding: 50px 0;
             background-color: #030303;
@@ -90,11 +94,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             height: 500px;
-            /* Adjust the height as needed */
+            
             display: flex;
-            /* Add this line */
+            
             flex-direction: column;
-            /* Add this line */
+            
             justify-content: space-between;
 
         }
@@ -102,6 +106,7 @@
         .memory:hover {
             transform: translateY(-5px);
         }
+
         .memory:hover:before {
             transform: translateY(0);
         }
@@ -125,8 +130,64 @@
             text-align: center;
             margin: 0;
             opacity: 1;
-            /* Initially hide the text */
+            
 
+        }
+
+        .touristblogs {
+            display: flex;
+            justify-content: center;
+        }
+
+        .blog-post {
+            margin-bottom: 40px;
+            background-color: transparent;
+            border-radius: 70px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(249, 246, 246, 0.929);
+            color: #ede9e9;
+        }
+
+        .blog-image {
+            width: 700px;
+            
+            height: auto;
+            
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .blog-meta {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .blog-description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #0056b3;
         }
     </style>
 
@@ -136,28 +197,23 @@
     <header id="site-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-
                 <a class="navbar-brand" href="index.html">
                     <img src="/imgs/logoLM.png" alt="Bootstrap" width="65" height="65">
                 </a>
-
-
-
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" style="font-size: 100%; font-family: 'Cabin', sans-serif;"
+                            <a class="nav-link active" style="font-size: 100%; font-family: Kanit, sans-serif;"
                                 aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" style="font-size: 100%; font-family: 'Cabin', sans-serif;"
+                            <a class="nav-link active" style="font-size: 100%; font-family: Kanit, sans-serif;"
                                 aria-current="page" href="destination.html">Destinations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="font-size: 100%; font-family: 'Cabin', sans-serif;"
-                                href="#">About Us</a>
+                            <a class="nav-link" style="font-size: 100%; font-family: Kanit, sans-serif;" href="#">About
+                                Us</a>
                         </li>
-
                     </ul>
                     <div class="logo-container">
                         <label for="menuToggle" class="logo">
@@ -177,10 +233,6 @@
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
-
-
-
-
                 </div>
             </div>
         </nav>
@@ -303,13 +355,13 @@
                     <img src="/imgs/zip.jpg" class="gallery-item" alt="gallery">
                     <div class="label"
                         style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
-                        Popular</div>
+                    </div>
                 </div>
                 <div class="col">
                     <img src="/imgs/divine.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
                     <div class="label"
                         style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
-                        Featured</div>
+                    </div>
                 </div>
                 <div class="col">
                     <img src="/imgs/holon.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
@@ -381,7 +433,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="customer-reviews" style="position: absolute; top: 1970px;">
+                    <div class="customer-reviews" style="position: absolute; top: 1900px;">
                         <h1 class="review-text">Customer Reviews</h1>
                         <p>Read what our customers have to say about their travel experiences.</p>
                     </div>
@@ -564,10 +616,28 @@
         </div>
     </section>
 
-
-
-
     <hr id="fixedHr8">
+
+    <section class="touristblogs">
+        <article class="blog-post">
+            <img src="/imgs/holon.jpg" alt="Blog Image" class="blog-image">
+            <div class="blog-content">
+                <h2 class="blog-title">Exploring the Hidden Gems of Nature</h2>
+                <p class="blog-meta">Posted by John Doe on March 8, 2024</p>
+                <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                    Praesent libero.
+                    Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                <p class="blog-description">Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+                    porta.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </article>
+    </section>
+
+
+
+
+
     <div style="height: 600px;"></div>
 
 

@@ -29,24 +29,35 @@
 
 .navbar-nav {
     font-family: 'Cabin', sans-serif;
-    margin-left: 800px;
+    
     /* Change margin-left to auto */
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 750px;
     /* Set a maximum width for the navbar-nav */
 
 }
 
+.nav-item {
+    margin-right: 20px; /* Add space between nav items */
+}
 .navbar-nav .nav-link {
     font-size: small;
 
 }
 
+.nav-link:hover {
+    color: #454244 !important; /* Change color on hover */
+}
+
 .navbar {
-    background-color: rgb(16, 15, 15);
+    background-color: transparent;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 60px;
 }
+
 
 
 
@@ -61,3 +72,14 @@
 .custom-search-input {
     height: 30px;
 }
+
+.logo-container img:hover {
+    filter: invert(100%) !important;
+}
+
+.navbar-brand img:hover {
+    filter: invert(60%) !important;
+}
+
+
+
