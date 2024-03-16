@@ -30,323 +30,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <style>
-        .carousel-item {
-            transition: transform 0.2s ease, opacity 0.2s ease;
-            opacity: 0;
-            background-color: transparent;
-        }
-
-        .carousel-item-next {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-
-        .carousel-item-prev {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-
-        .carousel-item.active {
-            transform: translateX(0%);
-            opacity: 1;
-        }
-
-        .carousel-inner {
-            background-color: transparent;
-        }
-
-        .carousel-inner {
-            max-width: 100%;
-            /* Set the maximum width to prevent overflow */
-        }
-
-        .gallery {
-            max-width: 100%;
-            /* Set the maximum width to prevent overflow */
-            overflow: hidden;
-            /* Hide any content that overflows the container */
-        }
-
-        .travel-tips-section {
-            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsGVy1Od_kKcGmuX0b_IANAdIl1Oqw4jIOXFigN0dRbry9QVib0skrL5jQgDyYEPSBOa2esWtTQyTmAQKnhyQUgxa2mGpYnsQrIGqoGXzQFHfgNq8ynOzpB2IgKQtmAQXouFzYKoDOEy4/s1600/hikong+kmebel.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            /* Add this line */
-        }
-
-        .travel-tips-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            /* Adjust the opacity value here */
-        }
-
-        .travel-tips-section h3,
-        .travel-tips-section p {
-            color: #fff;
-            filter: brightness(150%);
-            /* Set text color to white */
-        }
-
-        .traveltips.fadeIn {
-            opacity: 1;
-            /* Set opacity to 1 for fade-in effect */
-        }
-
-        .traveltips.fadeOut {
-            opacity: 0;
-            /* Set opacity to 0 for fade-out effect */
-        }
-
-        #fixedHr {
-            width: 100%;
-            max-width: 1390px;
-            height: 1px;
-            margin: 0 auto;
-            background-color: rgb(227, 236, 244);
-            border: none;
-        }
-
-        #fixedHr2 {
-            width: 100%;
-            max-width: 1390px;
-            height: 1px;
-            margin: 50px auto;
-            background-color: rgb(227, 236, 244);
-            border: none;
-        }
-
-        #fixedHr3 {
-            width: 100%;
-            max-width: 1390px;
-            height: 1px;
-            margin: 90px auto;
-            background-color: rgb(227, 236, 244);
-            border: none;
-        }
-
-        #fixedHr4 {
-            width: 100%;
-            max-width: 1390px;
-            height: 1px;
-            margin: 200px auto;
-            background-color: rgb(227, 236, 244);
-            border: none;
-        }
-
-        #fixedHr5 {
-            width: 100%;
-            max-width: 130px;
-            height: 1px;
-            margin: 10px auto;
-            background-color: rgb(227, 236, 244);
-            border: none;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }
-        }
-
-        .fadeIn {
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .fadeOut {
-            animation: fadeOut 0.5s ease forwards;
-        }
-
-        .review {
-            position: relative;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            border-radius: 10px;
-            /* Add border style */
-            border: 2px solid white;
-            /* Adjust border color, style, and width as needed */
-        }
-
-        .review.active {
-            opacity: 1;
-        }
-
-        .slideInLeft {
-            animation: slideInLeftAnimation 0.5s ease;
-        }
-
-        @keyframes slideInLeftAnimation {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .slideOutLeft {
-            animation: slideOutLeftAnimation 0.5s ease;
-        }
-
-        @keyframes slideOutLeftAnimation {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-
-            to {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-        }
-
-        .customer-reviews h1.review-text,
-        .customer-reviews p {
-            color: white;
-        }
-
-        .review .card-title {
-            color: white;
-        }
-
-        .review .card-title {
-            color: white;
-        }
-
-        .review .card-text {
-            color: white;
-        }
-
-        .customerreview .card {
-            border: 2px solid white;
-            border-radius: 10px;
-        }
-
-        .customerreview .card-body {
-            background-color: transparent;
-            /* Add this line to make the card body transparent */
-        }
-
-        .icons {
-            display: flex;
-            flex-direction: column;
-            padding-top: 30px;
-            padding-right: 40%;
-            /* Adjust top padding as needed */
-        }
-
-        .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #5f5f63;
-            margin-right: 10px;
-            /* Add margin to separate icon from text */
-            font-size: 24px;
-            color: #fff;
-            transition: background-color 0.3s;
-        }
-
-        .icon:hover {
-            background-color: #e6ebef;
-        }
-
-        .icon-wrapper {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-            /* Add margin between icon-wrapper elements */
-        }
-
-        .icon-wrapper span {
-            margin-left: 10px;
-            white-space: nowrap;
-            /* Adjust the spacing between the icon and text */
-        }
-
-        .logo-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .logo-container img {
-            width: 30px;
-            /* Adjust the width as needed */
-            height: 30px;
-            /* Maintain aspect ratio */
-        }
-
-
-        .logo-container:hover .menu {
-            display: block;
-            transform: translateY(0);
-            /* Slide down when hovering over the logo */
-        }
-
-        .menu-toggle-icon:checked~.logo-container .menu-toggle-icon {
-            display: block;
-        }
-
-        .menu-toggle-icon {
-            display: none;
-        }
-
-        .menu-toggle-icon:checked~.menu {
-            display: block;
-        }
-
-        .menu {
-            display: none;
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 0;
-            background-color: #f9f9f9;
-            padding: 20px;
-            z-index: 1;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu a {
-            display: block;
-            padding: 5px 0;
-            color: #333;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu a:hover {
-            background-color: #ddd;
-        }
-    </style>
+    
 
     <title>E-tourism</title>
 
@@ -658,22 +342,25 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="customer-reviews">
-                        <h1 class="review-text">Tour Location</h1>
-                        <p>Check out our exciting tour packages tailored for different interests.</p>
+                        <h1 class="review-text" style="font-family: Kanit, sans-serif;">Tour Location</h1>
+                        <p style="font-family: Kanit, sans-serif;">Check out our exciting tour packages tailored for
+                            different interests.</p>
                         <div class="icons" style="position: relative; top: -50px;">
                             <div class="icon-wrapper">
                                 <a href="#" class="icon"><i class="fas fa-hiking"></i></a>
-                                <span>Adventure Tours</span>
+                                <span style="color: #faf7f7;">Adventure Tours</span>
                             </div>
                             <hr id="fixedHr5">
                             <div class="icon-wrapper">
                                 <a href="#" class="icon"><i class="fas fa-swimmer"></i></a>
-                                <span>Swimming Pool</span>
+                                <span style="color: #faf7f7;">Swimming Pool</span>
                             </div>
+                            <hr id="fixedHr6">
                             <div class="icon-wrapper">
                                 <a href="#" class="icon"><i class="fas fa-camera"></i></a>
-                                <span>City/Municipality Explorations</span>
+                                <span style="color: #faf7f7;">City/Municipality Explorations</span>
                             </div>
+                            <hr id="fixedHr7">
                         </div>
                     </div>
                 </div>
@@ -685,6 +372,106 @@
 
     <hr id="fixedHr4">
 
+    <section class="travel-memories">
+        <div class="container">
+            <h2 style="color: #faf8f8; font-family: Kanit, sans-serif;">Travel Memories</h2>
+            <div id="memoryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="memory">
+                                    <img src="/imgs/kamayadan.JPG" alt="Travel Memory 1">
+                                    <h3>Kamayadan Festival</h3>
+                                    <p>Photographer: Nanardx<br>Every month of March the Municipality of Norala in South
+                                        Cotabato celebrates the
+                                        Kamayadan Festival, a colorful and joyful celebration of the town’s rich
+                                        agricultural harvests, governance’s feats, and a showcasing of the people’s
+                                        culture and traditions.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="memory">
+                                    <img src="/imgs/tnalak.JPG" alt="Travel Memory 2">
+                                    <h3>T'nalak Festival</h3>
+                                    <p>Every month of July, the vibrant province of South Cotabato, nestled in the heart
+                                        of Mindanao, comes alive with a spectacular burst of colors, beats of
+                                        traditional music, and the rich aroma of local cuisine. This is the T'nalak
+                                        Festival, a celebration like no other, paying homage to South Cotabato's rich
+                                        culture and history, and the beautiful handwoven fabric - the T'nalak of the
+                                        Tboli's.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="memory">
+                                    <img src="/imgs/tboliknoon.jpg" alt="Travel Memory 3">
+                                    <h3>T'boli Illuminated</h3>
+                                    <p>Photographer: Denn Jib Seblos<br>This photo was taken during the culmination of
+                                        the Seslong Festival 2019. The
+                                        foreground clearly shows TBOLI KNOON, simply put, it means beautiful T'Boli. It
+                                        serves as a greeting to visitors and tourists, and also a reminder to the
+                                        locals. The fireworks were just added bonus to the already spectacular scene.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="memory">
+                                    <img src="/imgs/matutumpineapple.jpg" alt="Travel Memory 1">
+                                    <h3>Mt. Matutum and the Hypnotic Stars</h3>
+                                    <p>Photographer: Ramil Leonida | General Santos City<br>Mt. Matutum had been the
+                                        subject of many landscape photos from sunrise til sunset. During the night, its
+                                        also one of the best subject while shooting for the stars in the night sky.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="memory">
+                                    <img src="/imgs/tnalak.JPG" alt="Travel Memory 2">
+                                    <h3>T'nalak Festival</h3>
+                                    <p>Every month of July, the vibrant province of South Cotabato, nestled in the heart
+                                        of Mindanao, comes alive with a spectacular burst of colors, beats of
+                                        traditional music, and the rich aroma of local cuisine. This is the T'nalak
+                                        Festival, a celebration like no other, paying homage to South Cotabato's rich
+                                        culture and history, and the beautiful handwoven fabric - the T'nalak of the
+                                        Tboli's.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="memory">
+                                    <img src="/imgs/tboliknoon.jpg" alt="Travel Memory 3">
+                                    <h3>T'boli Illuminated</h3>
+                                    <p>This photo was taken during the culmination of the Seslong Festival 2019. The
+                                        foreground clearly shows TBOLI KNOON, simply put, it means beautiful T'Boli. It
+                                        serves as a greeting to visitors and tourists, and also a reminder to the
+                                        locals. The fireworks were just added bonus to the already spectacular scene.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items for additional memories -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#memoryCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#memoryCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <hr id="fixedHr8">
     <div style="height: 600px;"></div>
 
 
