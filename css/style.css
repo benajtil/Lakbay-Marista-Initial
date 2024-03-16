@@ -62,7 +62,8 @@ body {
 #fixedHr5,
 #fixedHr6,
 #fixedHr7,
-#fixedHr8 {
+#fixedHr8,
+#fixedHr9 {
     width: 100%;
     max-width: 1500px;
     height: 1px;
@@ -91,6 +92,10 @@ body {
 }
 
 #fixedHr8 {
+    margin: 100px auto;
+}
+
+#fixedHr9{
     margin: 100px auto;
 }
 
