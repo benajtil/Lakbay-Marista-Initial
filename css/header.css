@@ -1,19 +1,50 @@
+#site-header {
+    transition: top 0.5s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 1;
+}
+
+.show-header {
+    top: 0;
+}
+
+
+/* Add this class for hiding the header */
+.hide-header {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+/* Add this class for showing the header */
+.show-header {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    opacity: 1;
+}
+
+
 .navbar-nav {
     font-family: 'Cabin', sans-serif;
-    margin-left: 800px; /* Change margin-left to auto */
-    max-width: 100%; /* Set a maximum width for the navbar-nav */
-    
+    margin-left: 800px;
+    /* Change margin-left to auto */
+    max-width: 100%;
+    /* Set a maximum width for the navbar-nav */
+
 }
 
 .navbar-nav .nav-link {
     font-size: small;
-    
+
 }
 
 .navbar {
     background-color: rgb(16, 15, 15);
-    padding-top: 10px; 
-    padding-bottom: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: 60px;
 }
 
@@ -24,10 +55,9 @@
 .nav-link {
     color: rgb(230, 236, 241) !important;
     font-family: 'Cabin', sans-serif;
-    
+
 }
 
 .custom-search-input {
-    height: 30px; 
+    height: 30px;
 }
-

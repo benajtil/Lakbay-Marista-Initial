@@ -1,14 +1,15 @@
 body {
-            margin: 0;
-            min-height: 100vh;
-            position: relative;
-            background-color: rgb(192, 176, 176);
-        }
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(192, 176, 176);
+}
 
 
-        .homepage {
-            position: relative;
-        }
+.homepage {
+    position: relative;
+}
+
 .gallery {
     max-width: 100%;
     /* Set the maximum width to prevent overflow */
@@ -278,5 +279,10 @@ body {
     background-color: #ddd;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 0 0px;
 
+    /* Adjust the horizontal spacing as needed */
 
+}

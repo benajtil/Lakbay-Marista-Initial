@@ -36,25 +36,19 @@
 
     <style>
         
-
-
         #carousel1 {
             padding-top: 30%;
         }
-
         .carousel-item img {
             height: 350px;
             object-fit: cover;
             filter: brightness(40%);
         }
-
-
         .carousel-item {
             transition: transform 0.2s ease, opacity 0.2s ease;
             opacity: 0;
             background-color: transparent;
         }
-
         .carousel-item-next {
             transform: translateX(100%);
             opacity: 0;
@@ -78,9 +72,6 @@
             max-width: 100%;
             /* Set the maximum width to prevent overflow */
         }
-
-
-
         .travel-memories {
             padding: 50px 0;
             background-color: #030303;
@@ -111,9 +102,6 @@
         .memory:hover {
             transform: translateY(-5px);
         }
-
-
-
         .memory:hover:before {
             transform: translateY(0);
         }
@@ -142,12 +130,10 @@
         }
     </style>
 
-
-
 </head>
 
 <body style="background-color: black;">
-    <header>
+    <header id="site-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
 
@@ -504,7 +490,8 @@
                                 <div class="memory">
                                     <img src="/imgs/tnalak.JPG" alt="Travel Memory 2">
                                     <h3>T'nalak Festival</h3>
-                                    <p>Photographer: Nanardx<br>Every month of July, the vibrant province of South Cotabato, nestled in the heart
+                                    <p>Photographer: Nanardx<br>Every month of July, the vibrant province of South
+                                        Cotabato, nestled in the heart
                                         of Mindanao, comes alive with a spectacular burst of colors, beats of
                                         traditional music, and the rich aroma of local cuisine. This is the T'nalak
                                         Festival, a celebration like no other, paying homage to South Cotabato's rich
@@ -542,14 +529,20 @@
                                     <img src="/imgs/tunneloflights.jpg" alt="Travel Memory 2">
                                     <h3>Tunnel of Lights
                                     </h3>
-                                    <p>Photographer: Aleli Faith Cabahug<br>Step into a world of enchantment at the Kasadya Christmas Village in Surallah, South Cotabato, where the Tunnel of Lights ignites the spirit of the season with its mesmerizing glow. Experience the magic and make memories that sparkle forever.</p>
+                                    <p>Photographer: Aleli Faith Cabahug<br>Step into a world of enchantment at the
+                                        Kasadya Christmas Village in Surallah, South Cotabato, where the Tunnel of
+                                        Lights ignites the spirit of the season with its mesmerizing glow. Experience
+                                        the magic and make memories that sparkle forever.</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/kayakholon.jpg" alt="Travel Memory 3">
                                     <h3>Kayaking is more fun at Lake Holon</h3>
-                                    <p>Photographer: Jeniel Buday<br>Enjoy the fresh air and lush green sceneries while paddling in the crystal clear water of majestic Lake Holon. Kayaking is another outdoor activity attraction offered for campers and guests of Lake Holon in Tboli, South Cotabato.
+                                    <p>Photographer: Jeniel Buday<br>Enjoy the fresh air and lush green sceneries while
+                                        paddling in the crystal clear water of majestic Lake Holon. Kayaking is another
+                                        outdoor activity attraction offered for campers and guests of Lake Holon in
+                                        Tboli, South Cotabato.
                                     </p>
                                 </div>
                             </div>
@@ -596,7 +589,7 @@
     <script src="bootstrap.bundle.min.js"></script>
     <script src="animation.js"></script>
     <script src="reviewsliding.js"></script>
-
+    <script src="headeranimation.js"></script>
     <script>
         function checkLoggedIn() {
             var isLoggedIn = sessionStorage.getItem('loggedIn');
