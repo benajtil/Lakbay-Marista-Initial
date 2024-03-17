@@ -63,7 +63,8 @@ body {
 #fixedHr6,
 #fixedHr7,
 #fixedHr8,
-#fixedHr9 {
+#fixedHr9,
+#fixedHsauna {
     width: 100%;
     max-width: 1310px;
     height: 1px;
@@ -99,6 +100,9 @@ body {
     margin: 100px auto;
 }
 
+#fixedHsauna{
+    margin: 100px auto;
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
