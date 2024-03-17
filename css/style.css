@@ -65,7 +65,7 @@ body {
 #fixedHr8,
 #fixedHr9 {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1310px;
     height: 1px;
     background-color: rgb(227, 236, 244);
     border: none;
@@ -77,7 +77,7 @@ body {
 }
 
 #fixedHr3 {
-    margin: 90px auto;
+    margin: 10px auto;
 }
 
 #fixedHr4 {
