@@ -36,7 +36,7 @@
         crossorigin="anonymous"></script>
 
 
-    <title>E-tourism</title>
+    <title>Lakbay Marista</title>
 
     <style>
         #carousel1 {
@@ -149,13 +149,29 @@
             overflow: hidden;
             box-shadow: 0 0 10px rgba(48, 44, 44, 0.929);
             color: #ede9e9;
+            position: relative;
+            /* Add this */
+        }
+
+        .blog-post::before {
+            /* Add this */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq9wPoguSxfQffMS8oAzYacQFbWCQuVP-kRBDpSlq0lnOZa6BZAWndO2zky_x_VfugqsZRFKRkrAOOK_zYHa8ivwjs5WVyqeesof66QDqQSZj8cngqPHrDyDHSkyHj6lTAkY_CKcuet8I/s1600/miss+tboli+2019.jpg');
+            background-size: cover;
+            filter: brightness(25%);
+            /* Move the filter here */
+            z-index: -1;
+            /* Ensure the pseudo-element is behind the content */
         }
 
         .blog-image {
-            width: 700px;
-
-            height: auto;
-
+            width: 400px;
+            height: 300px;
         }
 
         .blog-content {
@@ -354,19 +370,25 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col">
-                    <img src="/imgs/zip.jpg" class="gallery-item" alt="gallery">
-                    <div class="label"
-                        style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
-                    </div>
+                    <a href="your-link-here" target="_blank">
+                        <img src="/imgs/zip.jpg" class="gallery-item" alt="gallery">
+                        <div class="label"
+                            style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <img src="/imgs/divine.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
-                    <div class="label"
-                        style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
-                    </div>
+                    <a href="divinemercy.html" target="_blank">
+                        <img src="/imgs/divine.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
+                        <div class="label"
+                            style="position: absolute; background-color: rgba(240, 231, 231, 0.7); color: #131212; border-radius: 5px;">
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <img src="/imgs/holon.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
+                    <a href="your-link-here" target="_blank">
+                        <img src="/imgs/holon.jpg" class="gallery-item" style="height: 83%;" alt="gallery">
+                    </a>
                 </div>
             </div>
         </div>
@@ -436,10 +458,6 @@
 
     <!-- <hr id="fixedHr2"
         style="width: 100%; max-width: 1390px; height: 1px; margin: 0 auto; background-color: rgb(227, 236, 244); border: none;"> -->
-
-
-
-
 
 
     <hr id="fixedHr2">
@@ -686,11 +704,11 @@
     <hr id="fixedHr8">
 
     <section class="touristblogs">
-        <article class="blog-post">
-            <img src="/imgs/holon.jpg" alt="Blog Image" class="blog-image">
+        <article class="blog-post" style="text-align: center;">
+            
             <div class="blog-content">
                 <h2 class="blog-title">Exploring the Hidden Gems of Nature</h2>
-                <p class="blog-meta">Posted by CJ Buendicho on March 16, 2024</p>
+                
                 <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
                     Praesent libero.
                     Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
@@ -701,7 +719,7 @@
         </article>
     </section>
 
-    <hr id="fixedHr9">
+    
 
 
 
@@ -713,7 +731,7 @@
         <section class="footer">
             <div class="container">
                 <div class="detail">
-                    <h3>TravelX</h3>
+                    <h3>Lakbay Marista</h3>
                     <p style="font-family: Kanit, sans-serif;">Embark on unforgettable adventures with Lakbay Marista -
                         your ultimate guide to immersive travel
                         experiences, where every journey is a story waiting to be told</p>
