@@ -79,6 +79,67 @@
 
         }
 
+        .tourlocpic {
+            display: inline-block;
+            height: 700px;
+            margin-top: 30px;
+            width: 500px;
+        }
+
+        .tour-location-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tour-info {
+            display: flex;
+            margin-left: 80px;
+        }
+
+        .text-info {
+            margin-left: 50px;
+            /* Adjust margin as needed */
+            align-items: right;
+        }
+
+        .review-text {
+            margin-top: 40px;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .icon-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allow items to wrap */
+            width: 400px;
+            height: 100px;
+        }
+
+        .highlight-text {
+            flex-basis: 100%;
+            /* Take full width */
+            margin-left: 80px;
+        }
+
+
+        .icon {
+            margin-right: 10px;
+            /* Adjust margin as needed */
+        }
+
+        hr {
+            margin: 5px 0;
+            border: 0;
+            border-top: 1px solid #faf7f7;
+            /* Adjust color as needed */
+        }
+
         .travel-memories {
             padding: 50px 0;
             background-color: #030303;
@@ -456,8 +517,7 @@
         </div>
     </div>
 
-    <!-- <hr id="fixedHr2"
-        style="width: 100%; max-width: 1390px; height: 1px; margin: 0 auto; background-color: rgb(227, 236, 244); border: none;"> -->
+    
 
 
     <hr id="fixedHr2">
@@ -465,8 +525,8 @@
 
     <section class="feedback">
         <div class="container">
-            <h2 class="labelrev">Customer Reviews</h2>
-            <p>Read what our customers have to say about their <br> travel experiences</p>
+            <h2 class="labelrev" style="font-family: Kanit, sans-serif;">Customer Reviews</h2>
+            <p style="font-family: Kanit, sans-serif;">Read what our customers have to say about their <br> travel experiences</p>
             <div style="width: 100%; display: flex; justify-content: center;">
                 <button type="button" style="height: 50px; font-size: 16px; padding: 0 0px; width: 40%;"
                     class="btn btn-light" id="exploreBtn4">Write a Review</button>
@@ -570,36 +630,36 @@
 
     <hr id="fixedHr3">
 
-    <section class="customerreview">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="customer-reviews">
-                        <h1 class="review-text" style="font-family: Kanit, sans-serif;">Tour Location</h1>
-                        <p style="font-family: Kanit, sans-serif;">Check out our exciting tour packages tailored for
-                            different interests.</p>
-                        <div class="icons" style="position: relative; top: -50px;">
-                            <div class="icon-wrapper">
-                                <a href="#" class="icon"><i class="fas fa-hiking"></i></a>
-                                <span style="color: #faf7f7;">Adventure Tours</span>
-                            </div>
-                            <hr id="fixedHr5">
-                            <div class="icon-wrapper">
-                                <a href="#" class="icon"><i class="fas fa-swimmer"></i></a>
-                                <span style="color: #faf7f7;">Swimming Pool</span>
-                            </div>
-                            <hr id="fixedHr6">
-                            <div class="icon-wrapper">
-                                <a href="#" class="icon"><i class="fas fa-camera"></i></a>
-                                <span style="color: #faf7f7;">City/Municipality Explorations</span>
-                            </div>
-                            <hr id="fixedHr7">
-                        </div>
+    <div class="tour-location-container">
+        <div class="tour-info">
+            <img class="tourlocpic" src="imgs/ben10.png">
+            <div class="text-info">
+                <h1 class="review-text" style="font-family: Kanit, sans-serif;">Tour Location</h1>
+                <p style="font-family: Kanit, sans-serif;">Check out our exciting tour packages tailored for
+                    different interests.</p>
+                <div class="icons">
+                    <div class="icon-wrapper">
+                        <a href="#" class="icon"><i class="fas fa-hiking"></i></a>
+                        <span style="color: #faf7f7;">Adventure Tours</span>
                     </div>
+                    <p class="highlight-text" style="opacity: 0.5;">For Adrenaline Junkies</p>
+                    <hr>
+                    <div class="icon-wrapper">
+                        <a href="#" class="icon"><i class="fas fa-swimmer"></i></a>
+                        <span style="color: #faf7f7;">Swimming Pool</span>
+                    </div>
+                    <p class="highlight-text" style="opacity: 0.5;">Relax and Unwind</p>
+                    <hr>
+                    <div class="icon-wrapper">
+                        <a href="#" class="icon"><i class="fas fa-camera"></i></a>
+                        <span style="color: #faf7f7;">City/Municipality Explorations</span>
+                    </div>
+                    <p class="highlight-text" style="opacity: 0.5;">Immerse in Urban Culture</p>
+                    <hr style="border-top: 1px solid white;">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
 
@@ -615,8 +675,8 @@
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/kamayadan.JPG" alt="Travel Memory 1">
-                                    <h3>Kamayadan Festival</h3>
-                                    <p>Photographer: Nanardx<br>Every month of March the Municipality of Norala in South
+                                    <h3 style="font-family: Kanit, sans-serif;">Kamayadan Festival</h3>
+                                    <p style="font-family: Kanit, sans-serif;">Photographer: Nanardx<br>Every month of March the Municipality of Norala in South
                                         Cotabato celebrates the
                                         Kamayadan Festival, a colorful and joyful celebration of the town’s rich
                                         agricultural harvests, governance’s feats, and a showcasing of the people’s
@@ -626,8 +686,8 @@
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/tnalak.JPG" alt="Travel Memory 2">
-                                    <h3>T'nalak Festival</h3>
-                                    <p>Photographer: Nanardx<br>Every month of July, the vibrant province of South
+                                    <h3 style="font-family: Kanit, sans-serif;">T'nalak Festival</h3>
+                                    <p style="font-family: Kanit, sans-serif;">Photographer: Nanardx<br>Every month of July, the vibrant province of South
                                         Cotabato, nestled in the heart
                                         of Mindanao, comes alive with a spectacular burst of colors, beats of
                                         traditional music, and the rich aroma of local cuisine. This is the T'nalak
@@ -639,8 +699,8 @@
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/tboliknoon.jpg" alt="Travel Memory 3">
-                                    <h3>T'boli Illuminated</h3>
-                                    <p>Photographer: Denn Jib Seblos<br>This photo was taken during the culmination of
+                                    <h3 style="font-family: Kanit, sans-serif;">T'boli Illuminated</h3>
+                                    <p style="font-family: Kanit, sans-serif;">Photographer: Denn Jib Seblos<br>This photo was taken during the culmination of
                                         the Seslong Festival 2019. The
                                         foreground clearly shows TBOLI KNOON, simply put, it means beautiful T'Boli. It
                                         serves as a greeting to visitors and tourists, and also a reminder to the
@@ -655,8 +715,8 @@
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/matutumpineapple.jpg" alt="Travel Memory 1">
-                                    <h3>Mt. Matutum and the Hypnotic Stars</h3>
-                                    <p>Photographer: Ramil Leonida<br>Mt. Matutum had been the
+                                    <h3 style="font-family: Kanit, sans-serif;">Mt. Matutum and the Hypnotic Stars</h3>
+                                    <p style="font-family: Kanit, sans-serif;">Photographer: Ramil Leonida<br>Mt. Matutum had been the
                                         subject of many landscape photos from sunrise til sunset. During the night, its
                                         also one of the best subject while shooting for the stars in the night sky.</p>
                                 </div>
@@ -664,9 +724,9 @@
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/tunneloflights.jpg" alt="Travel Memory 2">
-                                    <h3>Tunnel of Lights
+                                    <h3 style="font-family: Kanit, sans-serif;">Tunnel of Lights
                                     </h3>
-                                    <p>Photographer: Aleli Faith Cabahug<br>Step into a world of enchantment at the
+                                    <p style="font-family: Kanit, sans-serif;">Photographer: Aleli Faith Cabahug<br>Step into a world of enchantment at the
                                         Kasadya Christmas Village in Surallah, South Cotabato, where the Tunnel of
                                         Lights ignites the spirit of the season with its mesmerizing glow. Experience
                                         the magic and make memories that sparkle forever.</p>
@@ -675,8 +735,8 @@
                             <div class="col-md-4">
                                 <div class="memory">
                                     <img src="/imgs/kayakholon.jpg" alt="Travel Memory 3">
-                                    <h3>Kayaking is more fun at Lake Holon</h3>
-                                    <p>Photographer: Jeniel Buday<br>Enjoy the fresh air and lush green sceneries while
+                                    <h3 style="font-family: Kanit, sans-serif;">Kayaking is more fun at Lake Holon</h3>
+                                    <p style="font-family: Kanit, sans-serif;">Photographer: Jeniel Buday<br>Enjoy the fresh air and lush green sceneries while
                                         paddling in the crystal clear water of majestic Lake Holon. Kayaking is another
                                         outdoor activity attraction offered for campers and guests of Lake Holon in
                                         Tboli, South Cotabato.
@@ -685,7 +745,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Add more carousel items for additional memories -->
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#memoryCarousel"
                     data-bs-slide="prev">
@@ -705,21 +765,20 @@
 
     <section class="touristblogs">
         <article class="blog-post" style="text-align: center;">
-            
+
             <div class="blog-content">
-                <h2 class="blog-title">Exploring the Hidden Gems of Nature</h2>
-                
-                <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                <h2 class="blog-title" style="font-family: Kanit, sans-serif;">Exploring the Hidden Gems of Nature</h2>
+
+                <p class="blog-description" style="font-family: Kanit, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
                     Praesent libero.
                     Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
-                <p class="blog-description">Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+                <p class="blog-description" style="font-family: Kanit, sans-serif;">Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
                     porta.</p>
                 <a href="#" class="read-more">Read More</a>
             </div>
         </article>
     </section>
 
-    
 
 
 
