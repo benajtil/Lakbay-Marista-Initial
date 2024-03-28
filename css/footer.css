@@ -17,7 +17,7 @@ footer .footer .container {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--green-color);
     gap: 2rem;
-    background-color: rgb(129, 108, 108);
+    background-color: rgb(50, 51, 65);
     max-width: 100%;
 }
 
@@ -29,7 +29,7 @@ footer .footer .container .detail h3 {
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: var(--white-color);
+    color: rgb(241, 243, 245);
 }
 
 footer .footer .container .detail p {
@@ -41,7 +41,7 @@ footer .footer .container .detail p {
 footer .footer .container .detail h5 {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--white-color);
+    color: rgb(241, 243, 245);
 }
 
 footer .footer .container .detail a {
@@ -68,7 +68,7 @@ footer .footer .container h4 {
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: .5rem;
-    color: var(--white-color);
+    color: rgb(236, 238, 240);
 }
 
 footer .footer .container li {
