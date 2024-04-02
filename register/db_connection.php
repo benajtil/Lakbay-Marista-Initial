@@ -2,7 +2,7 @@
 
 $servername = "localhost"; 
 $username = "root";
-$password = "Til091002"; 
+$password = ""; 
 $database = "lakbaymarista";
 
 // Create connection
