@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login-register.css">
     <style>
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            z-index: 9999;
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -33,9 +26,8 @@
         </div>
 
         <div class="form-container sign-up-container">
-            <button type="button" onclick="cancelRegistration()">Cancel</button>
+            <button type="button" id="cancelButton" onclick="cancelRegistration()">X    </button>
             <form id="signupForm" method="post" action="register.php">
-
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -44,16 +36,19 @@
                 </div>
                 <span>or use your email for registration</span>
                 <input type="name" name="name" id="name" placeholder="Name" required />
+                <span id="nameError" class="error"></span>
                 <input type="email" name="email" id="email" placeholder="Email" required />
+                <span id="emailError" class="error"></span>
                 <input type="password" name="password" id="password" placeholder="Password" required />
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"
-                    required />
+                <span id="passwordError" class="error"></span>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required />
+                <span id="confirmPasswordError" class="error"></span>
                 <button type="submit" id="submit">Sign Up</button>
             </form>
         </div>
 
         <div class="form-container sign-in-container">
-            <button type="button" onclick="cancelRegistration()">Cancel</button>
+            <button type="button" id="cancelButton" onclick="cancelRegistration()">X</button>
             <form action="login.php" method="post">
                 <h1>Sign in</h1>
                 <div class="social-container">
@@ -85,14 +80,6 @@
     </div>
 
 
-    
-
-    <div class="popup" id="successPopup">
-        <h3>Success</h3>
-        <p>Registration Successful!</p>
-        <button onclick="closePopup()">Close</button>
-    </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function cancelRegistration() {
@@ -118,28 +105,31 @@
                 var confirm_password = $("#confirm_password").val();
                 var email = $("#email").val();
 
-
-                $(".popup").hide();
+                $(".error").text("");
 
                 if (name === "") {
-                    displayError("Name is required");
+                    displayError("name", "Name is required");
                     return;
                 }
-                
+
                 if (password === "") {
-                    displayError("Password is required");
+                    displayError("password", "Password is required");
                     return;
                 }
-                if(password.length < 8){
-                    displayError("Password must be at least 8 characters");
+                if (password.length < 8) {
+                    displayError("password", "Password must be at least 8 characters");
                     return;
                 }
                 if (confirm_password === "") {
-                    displayError("Confirm Password is required");
+                    displayError("confirmPassword", "Confirm Password is required");
+                    return;
+                }
+                if (password !== confirm_password) {
+                    displayError("confirmPassword", "Passwords do not match");
                     return;
                 }
                 if (email === "") {
-                    displayError("Email is required");
+                    displayError("email", "Email is required");
                     return;
                 }
                 $.ajax({
@@ -159,69 +149,22 @@
                                 window.location.href = "index.html";
                             }, 2000);
                         } else {
-                            displayError(response);
+                            displayError("email", response);
                         }
                     },
 
                     error: function (xhr, status, error) {
-                        displayError("An error occurred. Please try again later.");
+                        displayError("email", "An error occurred. Please try again later.");
                     }
                 });
             });
         });
 
-        
-
-        
-    </script>
-    <script>
-        $(document).ready(function () {
-
-            $("#loginForm").submit(function (event) {
-                event.preventDefault();
-
-                var email = $("#email").val();
-                var password = $("#password").val();
-
-                $.ajax({
-                    url: "login.php",
-                    method: "POST",
-                    data: {
-                        email: email,
-                        password: password
-                    },
-                    success: function (response) {
-                        var data = JSON.parse(response);
-                        if (data.status === 'success') {
-
-                            displaySuccess(data.message);
-
-                            setTimeout(function () {
-                                window.location.href = "index.html";
-                            }, 2000);
-                        } else {
-
-                            displayError(data.message);
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        displayError("An error occurred. Please try again later.");
-                    }
-                });
-            });
-
-
-            function displaySuccess(message) {
-                $("#successMessage").html(message).show();
-            }
-            function displayError(message) {
-                $("#errorMessage").html(message).show();
-            }
-        });
+        function displayError(inputFieldId, message) {
+            $("#" + inputFieldId + "Error").text(message);
+        }
 
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 </body>
 
 </html>

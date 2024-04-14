@@ -38,7 +38,7 @@ $sql = "INSERT INTO users (name, email, hashed_password, original_password) VALU
 
 if ($conn->query($sql) === TRUE) {
     // Redirect to profile page upon successful registration
-    header("Location: profile.php");
+    header("Location: index.php");
     exit;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
